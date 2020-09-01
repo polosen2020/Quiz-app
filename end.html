@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quizery</title>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+	<div class="container-3">
+		
+		<i class="fa fa-trophy" id="trophy" aria-hidden="true" style="font-size: 400px;"></i>
+		
+	</div>
+	<div class="container-1">
+		<div class="winner"> 
+		<div class="username">	
+		Well Done, Poulomi Sen
+		</div>
+		<div class="score">
+		Your score :
+		</div>
+		<div class="time">
+		
+		Time : 10 sec
+	</div>
+	
+</div>
+</body>
+<script type="text/javascript">
+	document.querySelector(".username").innerHTML = `Well Done, ${sessionStorage.getItem('username')} `; 
+	document.querySelector(".score").innerHTML = `Your Score: <small>${sessionStorage.getItem('score')}</small>`; 
+	document.querySelector(".time").innerHTML =`Total Time: ${sessionStorage.getItem('minutes')} and ${sessionStorage.getItem('seconds')}`
+</script>
+
+</html>
+

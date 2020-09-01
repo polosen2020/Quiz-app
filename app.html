@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quizery</title>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+		
+	<div class="container-1">
+		<h2 class="text1">Quizery </h2>
+		
+	</div>
+	<div class="container-2">
+		
+		<form class="form" name="form" onsubmit="submitform(event)">
+			<input type="text" class="text2"  name="username">
+			<button  id="submit1" ><h1>Play</h1></button>
+		</form>
+	</div>
+
+
+<script>
+	function submitform(e) {
+			e.preventDefault();
+			location.href = "quiz.html";
+
+			let name = document.forms["form"]["username"].value;
+			sessionStorage.setItem("username",name);
+
+		
+	}
+
+	document.addEventListener('keypress',function(event){
+			if(event.keycode === 13 || event.which === 13){
+				event.preventDefault();
+				let name = document.forms["form"]["username"].value;
+				sessionStorage.setItem("username",name);
+
+				location.href = "quiz.html";
+				
+			}
+		});
+</script>
+</body>
+
+</html>
